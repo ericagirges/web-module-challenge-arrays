@@ -160,18 +160,19 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-let newArray = []
 function filterByWord(arr, flavorType){
+    const newArray = []
+
     for(let i = 0; i < arr.length; i++){
         if  (originalFlavors[i].includes(flavorType)){
-            console.log(originalFlavors[i]);
+            newArray.push(originalFlavors[i]);
         }
     }
-}
-newArray = filterByWord(originalFlavors, "Chocolate");
-newArray = []
 
-// console.log(filterByWord(originalFlavors, "Chocolate"));
+    return newArray;
+}
+
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 
